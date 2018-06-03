@@ -146,7 +146,9 @@ private[impl] object QueryUtils extends Logging {
 
         case TimestampType ⇒
             "TIMESTAMP"
-
+	
+	case BinaryType =>
+ 	   "BINARY"
         case _ ⇒
             throw new IgniteException(s"Unsupported data type ${field.dataType}")
     }
